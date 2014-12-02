@@ -1,7 +1,7 @@
 <% if flash.any? %>
-  <div id="flash">
+  <div class="flashes">
     <% flash.each do |key, value| -%>
-      <div id="flash_<%= key %>"><%= value %></div>
+      <%= content_tag :div, value, class: ['flash', key] %>
     <% end -%>
   </div>
 <% end %>
