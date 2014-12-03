@@ -1,7 +1,7 @@
 fieldset {
   background: lighten($base-border-color, 10);
   border: $base-border;
-  margin: 0 0 ($base-spacing / 2) 0;
+  margin: 0 0 ($base-spacing / 2);
   padding: $base-spacing;
 }
 
@@ -18,7 +18,7 @@ label {
   margin-bottom: $base-spacing / 4;
 
   &.required:after {
-    content: "*";
+    content: '*';
   }
 
   abbr {
@@ -32,13 +32,13 @@ select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
   background-color: white;
-  border-radius: $form-border-radius;
   border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
   margin-bottom: $base-spacing / 2;
-  padding: ($base-spacing / 3) ($base-spacing / 3);
+  padding: $base-spacing / 3;
   width: 100%;
 
   &:hover {
