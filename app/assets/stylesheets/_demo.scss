@@ -1,5 +1,5 @@
 section.demo {
-  $field-height: 10em;
+  $field-height: 20em;
 
   .source {
     @include span-columns(6);
@@ -13,17 +13,15 @@ section.demo {
     height: $field-height;
   }
 
-  textarea {
-    &:focus + #rouge_language {
-      opacity: 1;
-    }
-  }
-
   #rouge_language {
     @include position(absolute, $base-spacing / 3 $base-spacing / 3 0 0);
     @include transition(opacity .2s ease);
 
-    opacity: 0;
+    opacity: 0.2;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 
   #formatted {

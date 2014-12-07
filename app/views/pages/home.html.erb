@@ -3,7 +3,7 @@
     <%= form.label :source, 'Try some code' %>
     <div class="source">
       <%= form.text_area :source, as: :text %>
-      <%= form.select :language, { 'Ruby' => 1 } %>
+      <%= form.select :language, lexer_options_for_select %>
     </div>
     <div id="formatted"></div>
   <% end %>

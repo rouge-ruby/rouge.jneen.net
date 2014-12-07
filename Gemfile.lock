@@ -170,6 +170,7 @@ GEM
       ffi (>= 0.5.0)
     recipient_interceptor (0.1.2)
       mail
+    rouge (1.7.4)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -272,6 +273,7 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.1.8)
   recipient_interceptor
+  rouge
   rspec-rails (~> 3.0.0)
   sass-rails (~> 4.0.3)
   shoulda-matchers
