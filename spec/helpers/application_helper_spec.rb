@@ -3,7 +3,7 @@ require 'rails_helper'
 describe ApplicationHelper do
   describe '#lexer_options_for_select' do
     it 'returns a hash of languages and values' do
-      first_lexer = ['AppleScript', 0]
+      first_lexer = ['AppleScript', 'applescript']
 
       lexer_options = helper.lexer_options_for_select
 
