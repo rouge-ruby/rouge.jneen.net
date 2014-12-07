@@ -1,0 +1,36 @@
+section.demo {
+  $field-height: 10em;
+
+  .source {
+    @include span-columns(6);
+
+    position: relative;
+  }
+
+  #formatted,
+  textarea {
+    font-family: monospace;
+    height: $field-height;
+  }
+
+  textarea {
+    &:focus + #rouge_language {
+      opacity: 1;
+    }
+  }
+
+  #rouge_language {
+    @include position(absolute, $base-spacing / 3 $base-spacing / 3 0 0);
+    @include transition(opacity .2s ease);
+
+    opacity: 0;
+  }
+
+  #formatted {
+    @include omega;
+    @include span-columns(6);
+
+    background-color: white;
+    border-radius: $form-border-radius;
+  }
+}

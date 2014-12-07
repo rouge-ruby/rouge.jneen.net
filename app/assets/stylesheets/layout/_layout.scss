@@ -1,0 +1,6 @@
+main {
+  @include outer-container;
+
+  background-color: $base-background-color;
+  margin-top: flex-gutter();
+}

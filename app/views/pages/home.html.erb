@@ -1,0 +1,10 @@
+<section class="demo">
+  <%= form_for(:rouge, path: nil) do |form| %>
+    <%= form.label :source, 'Try some code' %>
+    <div class="source">
+      <%= form.text_area :source, as: :text %>
+      <%= form.select :language, { 'Ruby' => 1 } %>
+    </div>
+    <div id="formatted"></div>
+  <% end %>
+</section>

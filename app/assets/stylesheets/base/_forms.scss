@@ -17,10 +17,6 @@ label {
   font-weight: bold;
   margin-bottom: $base-spacing / 4;
 
-  &.required:after {
-    content: '*';
-  }
-
   abbr {
     display: none;
   }
@@ -34,7 +30,6 @@ select[multiple=multiple] {
   background-color: white;
   border: 1px solid $form-border-color;
   border-radius: $form-border-radius;
-  box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
   margin-bottom: $base-spacing / 2;
