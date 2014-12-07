@@ -87,3 +87,6 @@ search:
 ## Exclude these keys from all of the reports
 # ignore:
 #  - kaminari.*
+
+ignore_unused:
+  - titles.application
