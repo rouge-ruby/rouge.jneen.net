@@ -1,10 +1,10 @@
 <section class="demo">
-  <%= form_for(:rouge, path: nil) do |form| %>
+  <%= simple_form_for(:parse, url: parses_path, remote: true) do |form| %>
     <%= form.label :source, 'Try some code' %>
     <div class="source">
-      <%= form.text_area :source, as: :text %>
+      <%= form.text_area :source %>
       <%= form.select :language, lexer_options_for_select, { selected: 'ruby' } %>
     </div>
-    <div id="formatted"></div>
+    <pre class="highlight"></pre>
   <% end %>
 </section>

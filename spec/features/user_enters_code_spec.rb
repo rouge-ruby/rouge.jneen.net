@@ -1,16 +1,25 @@
 require 'rails_helper'
 
 feature 'User visits homepage' do
-  scenario 'enters text into source field' do
-    code = <<-END
-def method
-  puts "Hello world"
-end
-    END
+  context 'user enters text into source field' do
+    scenario 'expect text to be in source field' do
+      ruby_code = load_fixture 'code.rb'
 
-    visit root_path
-    fill_in 'Try some code', with: code
+      visit root_path
+      fill_in 'Try some code', with: ruby_code
 
-    expect(find_field('Try some code').value).to eq(code)
+      expect(find_field('Try some code').value).to eq(ruby_code)
+    end
+
+    scenario 'expect highlighted text to be in formatted box', js: true do
+      ruby_code = load_fixture 'code.rb'
+
+      visit root_path
+      fill_in 'Try some code', with: ruby_code
+
+      expect(page).to have_css('pre.highlight')
+      expect(find('span.nb').text).to eq('puts')
+      expect(find('span.s1').text).to eq("'hello world'")
+    end
   end
 end

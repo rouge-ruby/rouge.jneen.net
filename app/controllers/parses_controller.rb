@@ -1,8 +1,10 @@
 class ParsesController < ApplicationController
+  layout false
+
   def create
-    render html: Rouge.highlight(parse_params[:source],
-                                 parse_params[:language],
-                                 'html').html_safe
+    @parse = Rouge.highlight(parse_params[:source],
+                             parse_params[:language],
+                             'html').html_safe
   end
 
   private
