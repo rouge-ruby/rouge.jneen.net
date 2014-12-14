@@ -5,7 +5,7 @@ $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 16px;
 $h1-font-size: $base-font-size * 2.25;
 $h2-font-size: $base-font-size * 2;
 $h3-font-size: $base-font-size * 1.75;
@@ -63,3 +63,4 @@ $form-border-radius: $base-border-radius;
 $form-box-shadow-focus: 1px 1px 0 1px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
+$form-field-padding: $base-spacing / 3;

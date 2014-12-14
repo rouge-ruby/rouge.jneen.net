@@ -7,13 +7,15 @@ section.demo {
     position: relative;
   }
 
-  #formatted,
+  .highlight,
   textarea {
+    font: -webkit-control;
     font-family: monospace;
     height: $field-height;
+    white-space: pre-wrap;
   }
 
-  #rouge_language {
+  #parse_language {
     @include position(absolute, $base-spacing / 3 $base-spacing / 3 0 0);
     @include transition(opacity .2s ease);
 
@@ -24,11 +26,14 @@ section.demo {
     }
   }
 
-  #formatted {
+  .highlight {
     @include omega;
     @include span-columns(6);
 
-    background-color: white;
+    background-color: mix($light-red, $base-background-color, 50);
     border-radius: $form-border-radius;
+    line-height: $base-line-height;
+    margin: 0 inherit;
+    padding: $form-field-padding;
   }
 }
