@@ -1,0 +1,142 @@
+$base00: #151515;
+$base01: #202020;
+$base02: #303030;
+$base03: #505050;
+$base04: #B0B0B0;
+$base05: #D0D0D0;
+$base06: #E0E0E0;
+$base07: #F5F5F5;
+$base08: #AC4142;
+$base09: #D28445;
+$base0a: #F4BF75;
+$base0b: #90A959;
+$base0c: #75B5AA;
+$base0d: #6A9FB5;
+$base0e: #AA759F;
+$base0f: #8F5536;
+
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight,
+.highlight .w {
+  color: $base02;
+}
+
+.highlight .err {
+  background-color: $base08;
+  color: $base00;
+}
+
+.highlight .c,
+.highlight .cd,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: $base03;
+}
+
+.highlight .cp {
+  color: $base0a;
+}
+
+.highlight .nt {
+  color: $base0a;
+}
+
+.highlight .o,
+.highlight .ow {
+  color: $base05;
+}
+
+.highlight .p,
+.highlight .pi {
+  color: $base05;
+}
+
+.highlight .gi {
+  color: $base0b;
+}
+
+.highlight .gd {
+  color: $base08;
+}
+
+.highlight .gh {
+  background-color: $base00;
+  color: $base0d;
+  font-weight: bold;
+}
+
+.highlight .k,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kv {
+  color: $base0e;
+}
+
+.highlight .kc {
+  color: $base09;
+}
+
+.highlight .kt {
+  color: $base09;
+}
+
+.highlight .kd {
+  color: $base09;
+}
+
+.highlight .s,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s2,
+.highlight .sh,
+.highlight .sx,
+.highlight .s1 {
+  color: $base0b;
+}
+
+.highlight .sr {
+  color: $base0c;
+}
+
+.highlight .si {
+  color: $base0f;
+}
+
+.highlight .se {
+  color: $base0f;
+}
+
+.highlight .nn {
+  color: $base0a;
+}
+
+.highlight .nc {
+  color: $base0a;
+}
+
+.highlight .no {
+  color: $base0a;
+}
+
+.highlight .na {
+  color: $base0d;
+}
+
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .il,
+.highlight .mo,
+.highlight .mb,
+.highlight .mx {
+  color: $base0b;
+}
+
+.highlight .ss {
+  color: $base0b;
+}
