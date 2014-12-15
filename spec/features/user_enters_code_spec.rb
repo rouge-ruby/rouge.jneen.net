@@ -21,5 +21,20 @@ feature 'User visits homepage' do
       expect(find('span.nb').text).to eq('puts')
       expect(find('span.s1').text).to eq("'hello world'")
     end
+
+    scenario 'expect source to re-highlight when language is changed', js: true do
+      ruby_code = load_fixture 'code.rb'
+
+      visit root_path
+      fill_in 'Try some code', with: ruby_code
+
+      expect(find('span.s1').text).to eq("'hello world'")
+
+      css = find('option[value=css]')
+      css.select_option
+
+      expect(page).to have_selector('span.nt', count: 6)
+      expect(page).to have_selector('span.err', count: 2)
+    end
   end
 end
