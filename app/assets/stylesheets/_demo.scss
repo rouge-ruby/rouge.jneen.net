@@ -19,7 +19,7 @@ section.demo {
 
   #parse_language {
     @include position(absolute, $base-spacing / 3 $base-spacing / 3 0 0);
-    @include transition(opacity .2s ease);
+    @include transition(opacity 0.2s ease);
 
     opacity: 0.2;
 
@@ -34,6 +34,7 @@ section.demo {
 
     background-color: mix($light-red, $base-background-color, 50);
     border-radius: $form-border-radius;
+    border: 1px solid $form-border-color;
     line-height: $base-line-height;
     margin: 0 inherit;
     padding: $form-field-padding;

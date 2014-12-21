@@ -1,8 +1,10 @@
 // Typography
-$sans-serif: $helvetica;
+$raleway: 'Raleway', $helvetica;
+$sans-serif: $raleway;
 $serif: $georgia;
 $base-font-family: $sans-serif;
 $header-font-family: $base-font-family;
+$monospace: 'Source Code Pro', Courier, monospace;
 
 // Font Sizes
 $base-font-size: 16px;
@@ -20,6 +22,7 @@ $header-line-height: 1.25;
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
+$section-spacing: $base-spacing * 3;
 $base-z-index: 0;
 
 // Colors
@@ -60,7 +63,6 @@ $form-border-color: $base-border-color;
 $form-border-color-hover: darken($base-border-color, 10);
 $form-border-color-focus: $base-accent-color;
 $form-border-radius: $base-border-radius;
-$form-box-shadow-focus: 1px 1px 0 1px rgba(darken($form-border-color-focus, 5), 0.7);
 $form-font-size: $base-font-size;
 $form-font-family: $base-font-family;
 $form-field-padding: $base-spacing / 3;
