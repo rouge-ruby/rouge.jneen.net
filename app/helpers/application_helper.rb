@@ -4,4 +4,8 @@ module ApplicationHelper
       [lexer.name.demodulize, lexer.tag]
     end
   end
+
+  def lexer_count
+    Rouge::Lexer.all.count
+  end
 end

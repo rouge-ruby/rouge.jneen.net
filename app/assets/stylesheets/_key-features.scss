@@ -1,0 +1,13 @@
+section.key-features {
+  clear: both;
+  margin-top: $base-spacing * 2;
+
+  li {
+    @include span-columns(4);
+
+    h3 {
+      height: 2em * $header-line-height;
+      margin-bottom: $base-spacing;
+    }
+  }
+}

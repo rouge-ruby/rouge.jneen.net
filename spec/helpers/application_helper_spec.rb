@@ -11,4 +11,13 @@ describe ApplicationHelper do
       expect(lexer_options.first).to eq(first_lexer)
     end
   end
+
+  describe '#lexer_count' do
+    it 'returns the count of languages available to parse' do
+      count = Rouge::Lexer.all.count
+
+      expect(helper.lexer_count).not_to eq(0)
+      expect(helper.lexer_count).to eq(count)
+    end
+  end
 end

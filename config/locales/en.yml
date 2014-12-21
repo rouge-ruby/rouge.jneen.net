@@ -1,3 +1,4 @@
 en:
   titles:
     application: Rouge
+    tagline: An elegant, extendable code highlighter written in 100% pure Ruby.

@@ -1,6 +1,8 @@
 section.demo {
   $field-height: 20em;
 
+  @include clearfix;
+
   .source {
     @include span-columns(6);
 
