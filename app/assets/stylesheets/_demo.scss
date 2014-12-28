@@ -29,14 +29,13 @@ section.demo {
   }
 
   .highlight {
-    @include omega;
     @include span-columns(6);
 
     background-color: mix($light-red, $base-background-color, 50);
     border-radius: $form-border-radius;
     border: 1px solid $form-border-color;
     line-height: $base-line-height;
-    margin: 0 inherit;
+    margin-top: 0;
     padding: $form-field-padding;
   }
 }
