@@ -12,7 +12,12 @@ header {
 
   h2 {
     color: $rouge;
-    font-size: $base-font-size * 1.2;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+
+  h4 {
+    color: $medium-gray;
     text-align: center;
   }
 }
