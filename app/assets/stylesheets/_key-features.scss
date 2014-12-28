@@ -1,4 +1,6 @@
 section.key-features {
+  $icon-size: 152px;
+
   clear: both;
   margin-top: $section-spacing;
 
@@ -8,6 +10,33 @@ section.key-features {
     h3 {
       height: 0.5em * $header-line-height;
       margin-bottom: $base-spacing;
+      text-align: center;
     }
+
+    &:before {
+      @include size($icon-size / 2);
+
+      background-color: transparent;
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      border: 2px solid $light-rouge;
+      border-radius: $icon-size / 2;
+      content: '';
+      display: block;
+      margin: 0 auto $base-spacing;
+    }
+  }
+
+  .languages {
+    &:before { background-image: url(asset-path('icon_languages.png')); }
+  }
+
+  .parsing {
+    &:before { background-image: url(asset-path('icon_parsing.png')); }
+  }
+
+  .pygments {
+    &:before { background-image: url(asset-path('icon_pygments.png')); }
   }
 }
