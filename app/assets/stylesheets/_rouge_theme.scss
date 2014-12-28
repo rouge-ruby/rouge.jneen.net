@@ -1,19 +1,15 @@
-$base00: #151515;
-$base01: #202020;
-$base02: #303030;
-$base03: #505050;
-$base04: #B0B0B0;
-$base05: #D0D0D0;
-$base06: #E0E0E0;
-$base07: #F5F5F5;
-$base08: #AC4142;
-$base09: #D28445;
-$base0a: #F4BF75;
-$base0b: #90A959;
-$base0c: #75B5AA;
-$base0d: #6A9FB5;
-$base0e: #AA759F;
-$base0f: #8F5536;
+$base00: $dark-gray;
+$base02: $dark-gray;
+$base03: $medium-gray;
+$base05: $rouge;
+$base08: darken($rouge, 20);
+$base09: $purple;
+$base0a: darken($rouge, 20);
+$base0b: darken($rouge, 40);
+$base0c: darken($purple, 20);
+$base0d: darken($purple, 40);
+$base0e: $rouge;
+$base0f: mix($purple, $rouge);
 
 .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -24,7 +20,7 @@ $base0f: #8F5536;
 
 .highlight .err {
   background-color: $base08;
-  color: $base00;
+  color: $base0a;
 }
 
 .highlight .c,
@@ -40,17 +36,17 @@ $base0f: #8F5536;
 }
 
 .highlight .nt {
-  color: $base0a;
+  color: $base0e;
 }
 
 .highlight .o,
 .highlight .ow {
-  color: $base05;
+  color: $base0f;
 }
 
 .highlight .p,
 .highlight .pi {
-  color: $base05;
+  color: $base0f;
 }
 
 .highlight .gi {
@@ -138,5 +134,5 @@ $base0f: #8F5536;
 }
 
 .highlight .ss {
-  color: $base0b;
+  color: $base05;
 }
