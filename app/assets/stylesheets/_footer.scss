@@ -1,0 +1,8 @@
+footer {
+  @include outer-container;
+
+  font-size: $small-font-size;
+  margin-top: $base-spacing;
+  padding: $base-spacing 0;
+  text-align: center;
+}
