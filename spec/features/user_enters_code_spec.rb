@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'User visits homepage' do
   context 'user enters text into source field' do
     scenario 'expect text to be in source field' do
-      ruby_code = load_fixture 'code.rb'
+      ruby_code = load_fixture 'ruby.rb'
 
       visit root_path
       fill_in 'Try some code', with: ruby_code
@@ -12,7 +12,7 @@ feature 'User visits homepage' do
     end
 
     scenario 'expect highlighted text to be in formatted box', js: true do
-      ruby_code = load_fixture 'code.rb'
+      ruby_code = load_fixture 'ruby.rb'
 
       visit root_path
       fill_in 'Try some code', with: ruby_code
@@ -23,7 +23,7 @@ feature 'User visits homepage' do
     end
 
     scenario 'expect source to re-highlight when language is changed', js: true do
-      ruby_code = load_fixture 'code.rb'
+      ruby_code = load_fixture 'ruby.rb'
 
       visit root_path
       fill_in 'Try some code', with: ruby_code
