@@ -1,11 +1,15 @@
 module ApplicationHelper
+  def all_lexers
+    Rouge::Lexer.all.sort_by(&:tag)
+  end
+
   def lexer_options_for_select
-    Rouge::Lexer.all.map do |lexer|
+    all_lexers.map do |lexer|
       [lexer.title, lexer.tag]
     end
   end
 
   def lexer_count
-    Rouge::Lexer.all.count
+    all_lexers.count
   end
 end
