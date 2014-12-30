@@ -72,8 +72,6 @@ GEM
       json
       thread
       thread_safe
-    email_validator (1.4.0)
-      activemodel
     erubis (2.7.0)
     execjs (2.2.2)
     factory_girl (4.5.0)
@@ -256,7 +254,6 @@ DEPENDENCIES
   capybara-webkit (>= 1.2.0)
   database_cleaner
   dotenv-rails
-  email_validator
   factory_girl_rails
   flutie
   formulaic
