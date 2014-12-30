@@ -5,4 +5,4 @@ en:
       formatter_not_found: Rouge does not support that output format
   titles:
     application: Rouge
-    tagline: An elegant, extendable code highlighter written in 100% pure Ruby.
+    tagline: An elegant, extendable code highlighter written in pure Ruby.
