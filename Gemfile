@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 gem 'bourbon', '~> 3.2.1'
-gem 'email_validator'
 gem 'flutie'
 gem 'high_voltage'
 gem 'i18n-tasks'
