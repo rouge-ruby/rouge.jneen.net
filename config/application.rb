@@ -2,7 +2,6 @@ require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
 require "active_model/railtie"
-require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
@@ -16,7 +15,6 @@ Bundler.require(*Rails.groups)
 module Rouge
   class Application < Rails::Application
     config.i18n.enforce_available_locales = true
-    config.active_record.default_timezone = :utc
 
     config.generators do |generate|
       generate.helper false
