@@ -2,10 +2,10 @@
   <%= simple_form_for(:parse, url: parses_path, remote: true) do |form| %>
     <%= form.label :source, 'Try some code' %>
     <div class="source">
-      <%= form.text_area :source %>
+      <textarea id="parse_source" name="parse[source]"><%= render 'pages/placeholder' %></textarea>
       <%= form.select :language, lexer_options_for_select, { selected: 'ruby' } %>
     </div>
-    <pre class="highlight"></pre>
+    <%= render 'pages/highlighted' %>
   <% end %>
 </section>
 <section class="key-features">
