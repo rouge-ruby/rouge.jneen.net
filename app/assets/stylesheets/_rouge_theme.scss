@@ -29,10 +29,12 @@ $base0f: mix($purple, $rouge);
 .highlight .c1,
 .highlight .cs {
   color: $base03;
+  font-style: italic;
 }
 
 .highlight .cp {
   color: $base0a;
+  font-weight: bold;
 }
 
 .highlight .nt {
@@ -77,6 +79,7 @@ $base0f: mix($purple, $rouge);
 
 .highlight .kt {
   color: $base09;
+  font-weight: bold;
 }
 
 .highlight .kd {
