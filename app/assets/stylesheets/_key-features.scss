@@ -8,8 +8,8 @@ section.key-features {
     @include span-columns(4);
 
     h3 {
-      height: 0.5em * $header-line-height;
-      margin-bottom: $base-spacing;
+      height: $header-line-height;
+      margin-bottom: $base-spacing / 2;
       text-align: center;
     }
 

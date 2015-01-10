@@ -5,7 +5,6 @@ html {
 
 body {
   margin: 0 0 $footer-height;
-  padding: 0 $base-spacing;
 }
 
 main {
@@ -13,6 +12,7 @@ main {
 
   background-color: $base-background-color;
   min-width: $min-width;
+  padding: 0 $base-spacing;
 }
 
 a {
