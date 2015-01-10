@@ -25,7 +25,8 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $section-spacing: $base-spacing * 3;
 $base-z-index: 0;
-$footer-height: 0.8em * 3;
+$footer-height: $small-font-size * 3;
+$footer-room: $footer-height * 2;
 
 // Colors
 $blue: #477DCA;

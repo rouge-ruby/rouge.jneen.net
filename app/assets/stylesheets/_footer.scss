@@ -1,8 +1,7 @@
 footer {
-  @include position(absolute, 0 0 0px 0px);
+  @include position(absolute, null null 0px 0px);
 
   font-size: $small-font-size;
-  margin-top: $base-spacing;
   padding: $base-spacing 0;
   text-align: center;
   width: 100%;
