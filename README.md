@@ -41,7 +41,6 @@ ActiveRecord and ActionMailer
 
 ActiveRecord and ActionMailer are removed from this project for the moment because there is no database or mailers. If they need to be added back in, refer to the following commits:
 
-* ActiveRecord: a28eb97, 068c7a6
 * ActionMailer: d750823, a07d360
 
 Reversing these commits should put you on the right track.

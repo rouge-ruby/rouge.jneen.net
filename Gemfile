@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 gem 'bourbon', '~> 3.2.1'
+gem 'delayed_job_active_record'
 gem 'flutie'
 gem 'high_voltage'
 gem 'i18n-tasks'
