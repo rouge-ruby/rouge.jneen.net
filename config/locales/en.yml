@@ -3,6 +3,10 @@ en:
     highlighter:
       lexer_not_found: Rouge does not support that language
       formatter_not_found: Rouge does not support that output format
+  flashes:
+    paste:
+      create:
+        error: There was a problem creating the paste.
   time:
     formats:
       short: "%b %-d, %Y"
