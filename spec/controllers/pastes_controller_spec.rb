@@ -17,6 +17,24 @@ describe PastesController do
 
       expect(assigns[:paste]).to eq(paste)
     end
+
+    it 'assigns a parse to @parse' do
+      paste = create(:paste)
+      parse = double('parse')
+      allow(Highlighter).to receive(:perform).and_return(parse)
+
+      get :show, id: paste.id
+
+      expect(assigns[:parse]).to eq(parse)
+    end
+
+    it 'renders with pastes layout' do
+      paste = create(:paste)
+
+      get :show, id: paste.id
+
+      expect(response).to render_template(layout: 'pastes')
+    end
   end
 
   describe '#create' do
@@ -40,22 +58,26 @@ describe PastesController do
       it 'does not create the paste' do
         expect(Paste.count).to eq(0)
 
-        post :create, paste: { language: :ruby }
+        post_paste
 
         expect(Paste.count).to eq(0)
       end
 
       it 'redirect to the homepage' do
-        post :create, paste: { language: :ruby }
+        post_paste
 
         expect(response).to render_template('pages/home')
       end
 
       it 'sets the flash error' do
-        post :create, paste: { language: :ruby }
+        post_paste
 
         expect(flash[:error]).to eq(t('flashes.paste.create.error'))
       end
     end
+  end
+
+  def post_paste
+    post :create, paste: { language: :ruby }
   end
 end

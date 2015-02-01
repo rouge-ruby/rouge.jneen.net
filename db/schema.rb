@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20150201164013) do
   enable_extension "plpgsql"
 
   create_table "pastes", force: true do |t|
-    t.string "language"
-    t.string "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "language"
+    t.text     "source"
   end
 
 end

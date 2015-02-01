@@ -1,5 +1,9 @@
 section.paste {
+  -webkit-font-smoothing: auto;
+  border: 1px solid $form-border-color;
+  border-radius: $form-border-radius;
   position: relative;
+  overflow: hidden;
 
   aside.meta {
     @include position(absolute, 0px 0px null null);
@@ -15,5 +19,9 @@ section.paste {
     span {
       display: block;
     }
+  }
+
+  pre {
+    margin: 0;
   }
 }

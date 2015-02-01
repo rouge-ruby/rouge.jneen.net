@@ -36,4 +36,12 @@ section.demo {
     line-height: $base-line-height;
     margin-top: 0;
   }
+
+  form.new_paste {
+    clear: both;
+
+    div.input {
+      display: none;
+    }
+  }
 }

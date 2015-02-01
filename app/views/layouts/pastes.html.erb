@@ -10,10 +10,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class %>">
-  <%= render 'title' -%>
+  <header>
+    <%= render 'title' -%>
+  </header>
   <main>
-    <%= render 'flashes' -%>
     <%= yield %>
+    <h4><%= link_to 'Create your own...', root_path %></h4>
   </main>
   <%= render 'footer' %>
   <%= render 'javascript' %>

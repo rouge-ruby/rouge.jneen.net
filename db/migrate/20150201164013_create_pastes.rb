@@ -1,8 +1,10 @@
 class CreatePastes < ActiveRecord::Migration
   def change
     create_table :pastes do |t|
+      t.timestamps null: false
+
       t.string :language
-      t.string :source
+      t.text :source
     end
   end
 end

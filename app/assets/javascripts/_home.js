@@ -4,7 +4,7 @@ $(document).ready(function() {
   var submitSource = function() {
     clearTimeout(inputTimer);
     inputTimer = setTimeout(function() {
-      $('section.demo form').submit();
+      $('section.demo form.parse').submit();
     }, 500);
   }
 
@@ -14,4 +14,11 @@ $(document).ready(function() {
 
   $('#parse_source').on('input', submitSource);
   $('#parse_language').on('change', submitSource)
+
+  $('form.new_paste input[type=submit]').on('click', function() {
+    $('#paste_language').val($('#parse_language').val());
+    $('#paste_source').val($('#parse_source').val());
+
+    return true;
+  });
 });

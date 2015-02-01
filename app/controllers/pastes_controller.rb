@@ -1,6 +1,9 @@
 class PastesController < ApplicationController
+  layout 'pastes'
+
   def show
     @paste = Paste.find(params[:id])
+    @parse = Highlighter.perform(@paste.attributes)
   end
 
   def create

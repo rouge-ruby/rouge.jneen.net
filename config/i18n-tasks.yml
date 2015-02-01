@@ -7,4 +7,6 @@ search:
     - app/views
 
 ignore_unused:
+  - time.*
+  - helpers.submit.*
   - titles.*

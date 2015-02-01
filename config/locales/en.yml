@@ -7,9 +7,13 @@ en:
     paste:
       create:
         error: There was a problem creating the paste.
+  helpers:
+    submit:
+      paste:
+        create: Save this
   time:
     formats:
-      short: "%b %-d, %Y"
+      simple: "%b %-d, %Y"
   titles:
     application: Rouge
     tagline: An elegant, extendable code highlighter written in pure Ruby.
