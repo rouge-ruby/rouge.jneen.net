@@ -12,4 +12,9 @@ module ApplicationHelper
   def lexer_count
     all_lexers.count
   end
+
+  def lexer_title(tag)
+    lexer = Rouge::Lexer.find(tag)
+    lexer.title
+  end
 end
