@@ -31,7 +31,6 @@ section.demo {
   .highlight {
     @include span-columns(6);
 
-    background-color: mix($light-red, $base-background-color, 50);
     border: 1px solid $form-border-color;
     border-radius: $form-border-radius;
     line-height: $base-line-height;
