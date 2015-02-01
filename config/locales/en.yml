@@ -3,6 +3,9 @@ en:
     highlighter:
       lexer_not_found: Rouge does not support that language
       formatter_not_found: Rouge does not support that output format
+  time:
+    formats:
+      short: "%b %-d, %Y"
   titles:
     application: Rouge
     tagline: An elegant, extendable code highlighter written in pure Ruby.

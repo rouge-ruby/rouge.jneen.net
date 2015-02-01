@@ -1,0 +1,19 @@
+section.paste {
+  position: relative;
+
+  aside.meta {
+    @include position(absolute, 0px 0px null null);
+
+    background-color: rgba(white, 0.7);
+    color: $medium-gray;
+    font-family: $monospace;
+    font-size: $small-font-size;
+    padding: $form-field-padding;
+    pointer-events: none;
+    text-align: right;
+
+    span {
+      display: block;
+    }
+  }
+}

@@ -18,7 +18,7 @@ section.demo {
   }
 
   #parse_language {
-    @include position(absolute, $base-spacing / 3 $base-spacing / 3 0 0);
+    @include position(absolute, $base-spacing / 3 $base-spacing / 3 null null);
     @include transition(opacity 0.2s ease);
 
     opacity: 0.2;
@@ -35,6 +35,5 @@ section.demo {
     border-radius: $form-border-radius;
     line-height: $base-line-height;
     margin-top: 0;
-    padding: $form-field-padding;
   }
 }

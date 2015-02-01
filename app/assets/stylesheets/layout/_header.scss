@@ -3,13 +3,6 @@ header {
 
   margin-bottom: $section-spacing;
 
-  h1 {
-    @include hide-text;
-    background: transparent url(asset-path('logo.svg')) no-repeat center;
-    background-size: 300px;
-    height: 5em;
-  }
-
   h2 {
     margin-bottom: 1em;
   }
@@ -19,4 +12,11 @@ header {
     color: $dark-rouge;
     text-align: center;
   }
+}
+
+h1.main {
+  @include hide-text;
+  background: transparent url(asset-path('logo.svg')) no-repeat center;
+  background-size: 300px;
+  height: 5em;
 }

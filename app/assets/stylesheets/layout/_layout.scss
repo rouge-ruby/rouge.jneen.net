@@ -18,3 +18,17 @@ main {
 a {
   font-weight: 800;
 }
+
+pre.highlight {
+  padding: $form-field-padding;
+
+  @include selection {
+    background-color: #EFEFEF;
+  }
+
+  code, span {
+    @include selection {
+      background-color: #EFEFEF;
+    }
+  }
+}
