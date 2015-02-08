@@ -1,3 +1,14 @@
+body.pastes {
+  header {
+    margin-bottom: $base-spacing;
+  }
+
+  h4.create {
+    margin-bottom: $base-spacing;
+    text-align: center;
+  }
+}
+
 section.paste {
   -webkit-font-smoothing: auto;
   border: 1px solid $form-border-color;

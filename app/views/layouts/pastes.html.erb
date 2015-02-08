@@ -12,10 +12,11 @@
 <body class="<%= body_class %>">
   <header>
     <%= render 'title' -%>
+    <h2><%= t('titles.tagline') %></h2>
+    <h4 class="create"><%= link_to 'Create your own', root_path %></h4>
   </header>
   <main>
     <%= yield %>
-    <h4><%= link_to 'Create your own...', root_path %></h4>
   </main>
   <%= render 'footer' %>
   <%= render 'javascript' %>
