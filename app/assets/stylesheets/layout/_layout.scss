@@ -26,7 +26,8 @@ pre.highlight {
     background-color: #EFEFEF;
   }
 
-  code, span {
+  code,
+  span {
     @include selection {
       background-color: #EFEFEF;
     }

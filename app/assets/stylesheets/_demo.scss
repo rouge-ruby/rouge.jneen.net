@@ -13,7 +13,9 @@ section.demo {
   textarea {
     font: -webkit-control;
     font-family: monospace;
+    font-size: $base-font-size;
     height: $field-height;
+    line-height: $base-line-height;
     white-space: pre-wrap;
   }
 
