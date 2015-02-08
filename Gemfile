@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.1.5'
 
 gem 'bourbon'
-gem 'delayed_job_active_record'
 gem 'flutie'
 gem 'hashids'
 gem 'high_voltage'
