@@ -5,4 +5,14 @@ describe Paste do
     it { should validate_presence_of :language }
     it { should validate_presence_of :source }
   end
+
+  describe '#to_param' do
+    it 'returns the hash_id instead of the id' do
+      hash = 'abc'
+      allow(HASHIDS).to receive(:encode).and_return(hash)
+      paste = create(:paste)
+
+      expect(paste.to_param).to eq(hash)
+    end
+  end
 end

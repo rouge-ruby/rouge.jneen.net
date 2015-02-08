@@ -2,7 +2,7 @@ class PastesController < ApplicationController
   layout 'pastes'
 
   def show
-    @paste = Paste.find(params[:id])
+    @paste = find_paste
     @parse = Highlighter.perform(@paste.attributes)
   end
 
@@ -21,5 +21,11 @@ class PastesController < ApplicationController
 
   def paste_params
     params.require(:paste).permit(:language, :source)
+  end
+
+  def find_paste
+    hash = params[:id]
+    id = HASHIDS.decode(hash).first
+    Paste.find(id)
   end
 end

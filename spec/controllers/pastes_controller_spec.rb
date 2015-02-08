@@ -5,7 +5,7 @@ describe PastesController do
     it 'renders a the show view' do
       paste = create(:paste)
 
-      get :show, id: paste.id
+      get :show, id: HASHIDS.encode(paste.id)
 
       expect(response).to render_template :show
     end
@@ -13,7 +13,7 @@ describe PastesController do
     it 'assigns the paste to @paste' do
       paste = create(:paste)
 
-      get :show, id: paste.id
+      get :show, id: HASHIDS.encode(paste.id)
 
       expect(assigns[:paste]).to eq(paste)
     end
@@ -23,7 +23,7 @@ describe PastesController do
       parse = double('parse')
       allow(Highlighter).to receive(:perform).and_return(parse)
 
-      get :show, id: paste.id
+      get :show, id: HASHIDS.encode(paste.id)
 
       expect(assigns[:parse]).to eq(parse)
     end
@@ -31,7 +31,7 @@ describe PastesController do
     it 'renders with pastes layout' do
       paste = create(:paste)
 
-      get :show, id: paste.id
+      get :show, id: HASHIDS.encode(paste.id)
 
       expect(response).to render_template(layout: 'pastes')
     end

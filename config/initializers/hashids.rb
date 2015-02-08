@@ -1,0 +1,1 @@
+HASHIDS = Hashids.new(ENV['HASHIDS_SALT'])
