@@ -21,7 +21,6 @@ section.demo {
 
   #parse_language {
     @include position(absolute, $base-spacing / 3 $base-spacing / 3 null null);
-    @include transition(opacity 0.2s ease);
 
     opacity: 0.2;
 
