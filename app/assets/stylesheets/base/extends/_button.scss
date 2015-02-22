@@ -1,6 +1,7 @@
 %button {
   -webkit-font-smoothing: antialiased;
   background-color: $base-button-color;
+  border: 1px solid $hover-button-color;
   border-radius: $base-border-radius;
   color: white;
   display: inline-block;
