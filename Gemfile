@@ -23,6 +23,7 @@ gem 'unicorn'
 
 group :development do
   gem 'bundler-audit'
+  gem 'httparty'
   gem 'spring'
   gem 'spring-commands-rspec'
 end

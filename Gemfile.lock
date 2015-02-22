@@ -96,6 +96,9 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     i18n-tasks (0.7.8)
       activesupport
@@ -125,6 +128,7 @@ GEM
     mini_portile (0.6.1)
     minitest (5.5.1)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     neat (1.7.1)
       bourbon (>= 4.0)
       sass (>= 3.3)
@@ -257,6 +261,7 @@ DEPENDENCIES
   guard-rspec
   hashids
   high_voltage
+  httparty
   i18n-tasks
   jquery-rails
   launchy
