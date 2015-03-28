@@ -36,11 +36,12 @@ programming in style.
 * [Best Practices](http://github.com/thoughtbot/guides/blob/master/best-practices)
 * [Style](http://github.com/thoughtbot/guides/blob/master/style)
 
-ActiveRecord and ActionMailer
+ActionMailer
 -----------------------------
 
-ActiveRecord and ActionMailer are removed from this project for the moment because there is no database or mailers. If they need to be added back in, refer to the following commits:
+ActionMailer is removed from this project for the moment because there are no mailers. If it needs to be added back in, refer to the following commits:
 
-* ActionMailer: d750823, a07d360
+* d750823
+* a07d360
 
 Reversing these commits should put you on the right track.
