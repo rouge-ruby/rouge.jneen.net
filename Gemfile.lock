@@ -168,6 +168,8 @@ GEM
       ffi (>= 0.5.0)
     recipient_interceptor (0.1.2)
       mail
+    rollbar (1.5.0)
+      multi_json (~> 1.3)
     rouge (1.8.0)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
@@ -272,6 +274,7 @@ DEPENDENCIES
   rack-timeout
   rails (= 4.1.8)
   recipient_interceptor
+  rollbar
   rouge
   rspec-rails (~> 3.0.0)
   sass-rails
