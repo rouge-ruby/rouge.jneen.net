@@ -7,7 +7,7 @@ class PastesController < ApplicationController
   end
 
   def create
-    @paste = Paste.new(paste_params)
+    @paste = Paste.find_or_initialize_by(paste_params)
 
     if @paste.save
       redirect_to @paste
