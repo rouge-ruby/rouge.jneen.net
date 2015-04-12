@@ -52,6 +52,19 @@ describe PastesController do
 
         expect(response).to redirect_to(assigns[:paste])
       end
+
+      context 'with the exact same content as another paste' do
+        it 'redirects to that paste instead of creating it' do
+          paste = create(:paste)
+          duplicate_attrs = { language: paste.language, source: paste.source }
+          paste_count = Paste.count
+
+          post :create, paste: duplicate_attrs
+
+          expect(assigns[:paste]).to eq(paste)
+          expect(Paste.count).to eq(paste_count)
+        end
+      end
     end
 
     context 'invalid attributes' do
