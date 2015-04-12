@@ -79,7 +79,7 @@ describe PastesController do
       it 'redirect to the homepage' do
         post_paste
 
-        expect(response).to render_template('pages/home')
+        expect(response).to render_template('home_pages/show')
       end
 
       it 'sets the flash error' do
