@@ -1,11 +1,12 @@
 <section class="demo">
+  <% @lexer = Rouge::Lexer.all.sample %>
   <%= simple_form_for(:parse, url: parses_path, remote: true) do |form| %>
     <%= form.label :source, 'Try some code' %>
     <div class="source">
-      <textarea id="parse_source" name="parse[source]"><%= render 'pages/placeholder' %></textarea>
-      <%= form.select :language, lexer_options_for_select, { selected: 'ruby' } %>
+      <textarea id="parse_source" name="parse[source]"><%= @lexer.demo %></textarea>
+      <%= form.select :language, lexer_options_for_select, { selected: @lexer.tag } %>
     </div>
-    <%= render 'pages/highlighted' %>
+    <%= Rouge::Formatters::HTML.new.format(@lexer.lex(@lexer.demo)).html_safe %>
   <% end %>
   <%= simple_form_for(Paste.new) do |form| %>
     <%= form.input :language %>
