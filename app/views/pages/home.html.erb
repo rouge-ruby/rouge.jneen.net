@@ -1,13 +1,17 @@
+<%# TODO: [jneen] move this to a controller %>
+<% @lexer = Rouge::Lexer.all.sample %>
+<% @demo = Paste.demo_for(@lexer) %>
+
 <section class="demo">
-  <% @lexer = Rouge::Lexer.all.sample %>
   <%= simple_form_for(:parse, url: parses_path, remote: true) do |form| %>
     <%= form.label :source, 'Try some code' %>
     <div class="source">
-      <textarea id="parse_source" name="parse[source]"><%= @lexer.demo %></textarea>
-      <%= form.select :language, lexer_options_for_select, { selected: @lexer.tag } %>
+      <textarea id="parse_source" name="parse[source]"><%= @demo.source %></textarea>
+      <%= form.select :language, lexer_options_for_select, { selected: @demo.language } %>
     </div>
-    <%= Rouge::Formatters::HTML.new.format(@lexer.lex(@lexer.demo)).html_safe %>
+    <pre class="highlight"><code><%= @demo.parse %></code></pre>
   <% end %>
+
   <%= simple_form_for(Paste.new) do |form| %>
     <%= form.input :language %>
     <%= form.input :source, as: :text %>

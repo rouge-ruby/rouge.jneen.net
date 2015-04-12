@@ -1,7 +1,7 @@
 <section class="paste">
   <aside class="meta">
     <span class="date"><%= l(@paste.created_at, format: :simple) -%></span>
-    <span class="language"><%= lexer_title(@paste.language) -%></span>
+    <span class="language"><%= @paste.lexer.title -%></span>
   </aside>
-  <pre class="highlight"><code><%= @parse %></code></pre>
+  <pre class="highlight"><code><%= @paste.parse %></code></pre>
 </section>

@@ -21,12 +21,4 @@ describe ApplicationHelper do
       expect(helper.lexer_count).to eq(count)
     end
   end
-
-  describe '#lexer_title' do
-    it 'converts a lexers tag into its title' do
-      title = helper.lexer_title('cpp')
-
-      expect(title).to eq('C++')
-    end
-  end
 end
