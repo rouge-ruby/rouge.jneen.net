@@ -12,7 +12,7 @@ class PastesController < ApplicationController
       redirect_to @paste
     else
       flash[:error] = t('flashes.paste.create.error')
-      render 'pages/home'
+      render 'home_pages/show'
     end
   end
 
