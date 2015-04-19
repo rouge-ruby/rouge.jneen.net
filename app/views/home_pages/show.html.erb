@@ -1,7 +1,3 @@
-<%# TODO: [jneen] move this to a controller %>
-<% @lexer = Rouge::Lexer.all.sample %>
-<% @demo = Paste.demo_for(@lexer) %>
-
 <section class="demo">
   <%= simple_form_for(:parse, url: parses_path, remote: true) do |form| %>
     <%= form.label :source, 'Try some code' %>
