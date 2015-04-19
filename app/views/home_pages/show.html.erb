@@ -9,7 +9,7 @@
       <textarea id="parse_source" name="parse[source]"><%= @demo.source %></textarea>
       <%= form.select :language, lexer_options_for_select, { selected: @demo.language } %>
     </div>
-    <pre class="highlight"><code><%= @demo.parse %></code></pre>
+    <pre id="parse_result" class="highlight" data-lang="<%= @demo.language %>"><code><%= @demo.parse %></code></pre>
   <% end %>
 
   <%= simple_form_for(Paste.new) do |form| %>
