@@ -20,9 +20,11 @@ section.demo {
   }
 
   #parse_language {
-    @include position(absolute, $base-spacing / 3 $base-spacing / 3 null null);
+    $lang-position-v: $base-line-height + $base-spacing / 3;
+    $lang-position-h: $base-spacing / 3;
+    @include position(absolute, -$lang-position-v $lang-position-h null null);
 
-    opacity: 0.2;
+    opacity: 0.6;
 
     &:hover {
       opacity: 1;
