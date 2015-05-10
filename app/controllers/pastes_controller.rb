@@ -3,7 +3,6 @@ class PastesController < ApplicationController
 
   def show
     @paste = find_paste
-    @parse = Highlighter.perform(@paste.attributes)
   end
 
   def create

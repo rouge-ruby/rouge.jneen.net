@@ -15,4 +15,11 @@ describe Paste do
       expect(paste.to_param).to eq(hash)
     end
   end
+
+  describe '#lexer' do
+    it 'fetches the lexer based on the language' do
+      paste = create(:paste, :language => 'cpp')
+      expect(paste.lexer.tag).to eql('cpp')
+    end
+  end
 end

@@ -2,11 +2,12 @@
   <%= simple_form_for(:parse, url: parses_path, remote: true) do |form| %>
     <%= form.label :source, 'Try some code' %>
     <div class="source">
-      <textarea id="parse_source" name="parse[source]"><%= render 'placeholder' %></textarea>
-      <%= form.select :language, lexer_options_for_select, { selected: 'ruby' } %>
+      <textarea id="parse_source" name="parse[source]"><%= @demo.source %></textarea>
+      <%= form.select :language, lexer_options_for_select, { selected: @demo.language } %>
     </div>
-    <%= render 'highlighted' %>
+    <pre id="parse_result" class="highlight" data-lang="<%= @demo.language %>"><code><%= @demo.parse %></code></pre>
   <% end %>
+
   <%= simple_form_for(Paste.new) do |form| %>
     <%= form.input :language %>
     <%= form.input :source, as: :text %>

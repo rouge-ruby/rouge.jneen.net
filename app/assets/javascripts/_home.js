@@ -21,4 +21,8 @@ $(document).ready(function() {
 
     return true;
   });
+
+  $(document).ready(function() {
+    $('#parse_language').val($('#parse_result').data('lang'))
+  });
 });
