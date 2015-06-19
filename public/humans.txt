@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Edward Loveall -- Designer, Developer -- @edwardloveall
+    Jeanine Adkisson -- Developer (of the website and Rouge gem) -- @jneen_
+
+# TECHNOLOGY COLOPHON
+
+    rails, bourbon, neat

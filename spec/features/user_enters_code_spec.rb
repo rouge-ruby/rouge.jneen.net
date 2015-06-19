@@ -16,6 +16,7 @@ feature 'User visits homepage' do
 
       visit root_path
       fill_in 'Try some code', with: ruby_code
+      select 'Ruby', from: 'parse_language'
 
       expect(page).to have_css('pre.highlight')
       expect(find('span.nb').text).to eq('puts')
@@ -27,6 +28,7 @@ feature 'User visits homepage' do
 
       visit root_path
       fill_in 'Try some code', with: ruby_code
+      select 'Ruby', from: 'parse_language'
 
       expect(find('span.s1').text).to eq("'hello world'")
 

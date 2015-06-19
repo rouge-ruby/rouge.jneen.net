@@ -18,16 +18,6 @@ describe PastesController do
       expect(assigns[:paste]).to eq(paste)
     end
 
-    it 'assigns a parse to @parse' do
-      paste = create(:paste)
-      parse = double('parse')
-      allow(Highlighter).to receive(:perform).and_return(parse)
-
-      get :show, id: HASHIDS.encode(paste.id)
-
-      expect(assigns[:parse]).to eq(parse)
-    end
-
     it 'renders with pastes layout' do
       paste = create(:paste)
 
