@@ -145,6 +145,7 @@ GEM
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    oj (2.12.14)
     pg (0.18.3)
     pry (0.10.2)
       coderay (~> 1.1.0)
@@ -284,6 +285,7 @@ DEPENDENCIES
   launchy
   neat
   normalize-rails
+  oj
   pg
   pry-rails
   rack-timeout
