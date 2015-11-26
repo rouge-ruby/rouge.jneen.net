@@ -9,9 +9,10 @@ gem 'i18n-tasks'
 gem 'jquery-rails'
 gem 'neat'
 gem 'normalize-rails'
+gem 'oj'
 gem 'pg'
 gem 'rack-timeout'
-gem 'rails', '4.1.8'
+gem 'rails', '~> 4.2'
 gem 'recipient_interceptor'
 gem 'rollbar'
 gem 'rouge'
@@ -34,11 +35,11 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-rails'
-  gem 'rspec-rails', '~> 3.0.0'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'capybara-webkit', '>= 1.2.0'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'formulaic'
   gem 'guard-rspec', require: false
