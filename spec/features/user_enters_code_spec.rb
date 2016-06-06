@@ -32,10 +32,9 @@ feature 'User visits homepage' do
 
       expect(find('span.s1').text).to eq("'hello world'")
 
-      css = find('option[value=css]')
-      css.select_option
+      select 'Swift', from: 'parse_language'
 
-      expect(page).to have_selector('span.nt', count: 6)
+      expect(page).to have_selector('span.n', count: 6)
       expect(page).to have_selector('span.err', count: 2)
     end
   end
