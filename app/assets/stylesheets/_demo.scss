@@ -38,6 +38,7 @@ section.demo {
     border-radius: $form-border-radius;
     line-height: $base-line-height;
     margin-top: 0;
+    overflow-y: scroll;
   }
 
   form.new_paste {
