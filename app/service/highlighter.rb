@@ -31,7 +31,7 @@ class Highlighter
 
   def formatter
     if @formatter ||= Rouge::Formatter.find(@params[:format])
-      @formatter.new(wrap: false)
+      @formatter.new
     else
       raise FormatterNotFound, I18n.t('errors.highlighter.formatter_not_found')
     end
