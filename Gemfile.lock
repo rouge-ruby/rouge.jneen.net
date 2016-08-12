@@ -201,7 +201,7 @@ GEM
       mail
     rollbar (2.11.5)
       multi_json
-    rouge (1.11.0)
+    rouge (2.0.5)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
