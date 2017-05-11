@@ -197,8 +197,11 @@ StringLiterals:
 VariableInterpolation:
   Enabled: false
 
-TrailingComma:
-  Enabled: false
+TrailingCommaInArguments:
+  EnforcedStyleForMultiline: no_comma
+
+TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: no_comma
 
 TrivialAccessors:
   Enabled: false
