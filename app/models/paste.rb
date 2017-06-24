@@ -7,7 +7,7 @@ class Paste < ActiveRecord::Base
   end
 
   def lexer
-    Rouge::Lexer.find(self.language)
+    RougeVersion.current::Lexer.find(self.language)
   end
 
   def parse
