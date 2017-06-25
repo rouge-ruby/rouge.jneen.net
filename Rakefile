@@ -16,3 +16,5 @@ if defined? RSpec
 end
 
 task default: 'bundler:audit'
+
+task daily: 'rouge:precache'

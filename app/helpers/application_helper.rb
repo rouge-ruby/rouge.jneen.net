@@ -1,6 +1,10 @@
 module ApplicationHelper
+  def rouge
+    RougeVersion.current
+  end
+
   def all_lexers
-    Rouge::Lexer.all.sort_by(&:tag)
+    rouge::Lexer.all.sort_by(&:tag)
   end
 
   def lexer_options_for_select

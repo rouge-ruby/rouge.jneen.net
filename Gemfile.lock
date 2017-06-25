@@ -202,7 +202,6 @@ GEM
       mail
     rollbar (2.11.5)
       multi_json
-    rouge (2.1.0)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -305,7 +304,6 @@ DEPENDENCIES
   rails (~> 4.2)
   recipient_interceptor
   rollbar
-  rouge
   rspec-rails
   sass-rails
   shoulda-matchers
