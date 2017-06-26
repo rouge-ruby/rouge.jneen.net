@@ -74,7 +74,7 @@ module RougeVersion
         # version.
         Rouge::Lexers::Lua.builtins rescue nil
         Rouge::Lexers::PHP.builtins rescue nil
-        Rouge::Lexers::VimL.builtins rescue nil
+        Rouge::Lexers::VimL.keywords rescue nil
         Rouge::Lexers::Gherkin.builtins rescue nil
         Rouge::Lexers::Matlab.builtins rescue nil
 
