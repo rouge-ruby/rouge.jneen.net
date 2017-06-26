@@ -1,6 +1,6 @@
 class HomePagesController < ApplicationController
   def show
-    lexer = Rouge::Lexer.all.sample
+    lexer = rouge::Lexer.all.sample
     @demo = Paste.demo_for(lexer)
   end
 end

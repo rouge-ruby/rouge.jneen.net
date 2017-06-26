@@ -3,8 +3,7 @@ class Highlighter
   class LexerNotFound < StandardError; end
 
   def initialize(params)
-    opts = { format: 'html' }
-    @params = opts.merge(params.symbolize_keys)
+    @params = params.with_indifferent_access
   end
 
   def self.perform(params)
@@ -21,8 +20,12 @@ class Highlighter
     @source ||= @params[:source].encode(universal_newline: true)
   end
 
+  def rouge
+    RougeVersion.current
+  end
+
   def lexer
-    if @lexer ||= Rouge::Lexer.find(@params[:language])
+    if @lexer ||= rouge::Lexer.find(@params[:language])
       @lexer
     else
       raise LexerNotFound, I18n.t('errors.highlighter.lexer_not_found')
@@ -30,10 +33,6 @@ class Highlighter
   end
 
   def formatter
-    if @formatter ||= Rouge::Formatter.find(@params[:format])
-      @formatter.new(wrap: false)
-    else
-      raise FormatterNotFound, I18n.t('errors.highlighter.formatter_not_found')
-    end
+    @formatter ||= rouge::Formatters::HTML.new(wrap: false)
   end
 end

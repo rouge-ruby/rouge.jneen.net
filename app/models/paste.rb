@@ -7,7 +7,11 @@ class Paste < ActiveRecord::Base
   end
 
   def lexer
-    Rouge::Lexer.find(self.language)
+    @lexer ||= RougeVersion.current::Lexer.find(self.language)
+  end
+
+  def lexer_title
+    lexer.respond_to?(:title) ? lexer.title : lexer.tag
   end
 
   def parse

@@ -15,7 +15,10 @@ gem 'rack-timeout'
 gem 'rails', '~> 4.2'
 gem 'recipient_interceptor'
 gem 'rollbar'
-gem 'rouge'
+
+# Rouge versions are handled manually. See app/models/rouge_version.rb
+# gem 'rouge'
+
 gem 'sass-rails'
 gem 'simple_form'
 gem 'title'
