@@ -76,6 +76,7 @@ module RougeVersion
         Rouge::Lexers::PHP.builtins rescue nil
         Rouge::Lexers::VimL.builtins rescue nil
         Rouge::Lexers::Gherkin.builtins rescue nil
+        Rouge::Lexers::Matlab.builtins rescue nil
 
         # override for when the `Rouge` constant is looked up from within
         # the Rouge namespace - the default behavior is to look it up globally.
