@@ -81,6 +81,7 @@ module RougeVersion
         # the Rouge namespace - the default behavior is to look it up globally.
         Rouge.const_set(:Rouge, Rouge)
 
+        # removes the constant from the global scope and returns the value
         Object.send(:remove_const, :Rouge)
       end
     end
