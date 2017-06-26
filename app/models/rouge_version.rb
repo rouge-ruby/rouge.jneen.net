@@ -1,6 +1,10 @@
+require 'thread'
+
 module RougeVersion
   class << self
     TMP_DIR = Pathname.new(ENV['ROUGE_VERSION_TMP'] || Rails.root.join('tmp/rouge-versions'))
+    LOAD_MUTEX = Mutex.new
+
     Bundler.mkdir_p(TMP_DIR)
 
     def available_versions_file
@@ -55,14 +59,26 @@ module RougeVersion
       version_dir = TMP_DIR.join("rouge-#{version_number}")
       fetch_version(version_number) unless version_dir.exist?
 
-      # clean up just in case
-      Object.send(:remove_const, :Rouge) rescue NameError
+      LOAD_MUTEX.synchronize do
+        # clean up just in case
+        Object.send(:remove_const, :Rouge) rescue NameError
 
-      Kernel.load(version_dir.join('lib/rouge.rb'))
-      rouge = Rouge
-      Object.send(:remove_const, :Rouge)
+        Kernel.load(version_dir.join('lib/rouge.rb'))
 
-      rouge
+        # These need to be preloaded while the correct `Rouge` is in the global scope,
+        # because they assume the existence of a global `Rouge` object. In the future
+        # we'll handle these differently (i.e. with a yaml file, like the Apache lexer),
+        # so it won't be necessary to add to this list.
+        #
+        # The `rescue`s are for the cases where the lexer isn't defined in the current
+        # version.
+        Rouge::Lexers::Lua.builtins rescue nil
+        Rouge::Lexers::PHP.builtins rescue nil
+        Rouge::Lexers::VimL.builtins rescue nil
+        Rouge::Lexers::Gherkin.builtins rescue nil
+
+        Object.send(:remove_const, :Rouge)
+      end
     end
 
     def fetch_version(version_number)
