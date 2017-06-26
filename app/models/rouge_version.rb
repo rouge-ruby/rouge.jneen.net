@@ -77,6 +77,10 @@ module RougeVersion
         Rouge::Lexers::VimL.builtins rescue nil
         Rouge::Lexers::Gherkin.builtins rescue nil
 
+        # override for when the `Rouge` constant is looked up from within
+        # the Rouge namespace - the default behavior is to look it up globally.
+        Rouge.const_set(:Rouge, Rouge)
+
         Object.send(:remove_const, :Rouge)
       end
     end
