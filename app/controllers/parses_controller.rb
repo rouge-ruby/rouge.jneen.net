@@ -2,7 +2,8 @@ class ParsesController < ApplicationController
   layout false
 
   def create
-    @parse = Highlighter.perform(parse_params)
+    @highlighter = Highlighter.new(parse_params)
+    @parse = @highlighter.perform
   end
 
   private

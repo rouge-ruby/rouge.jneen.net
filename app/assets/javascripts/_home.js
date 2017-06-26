@@ -1,5 +1,6 @@
 $(document).ready(function() {
   var inputTimer;
+  var modified = false;
 
   var submitSource = function() {
     clearTimeout(inputTimer);
@@ -8,12 +9,35 @@ $(document).ready(function() {
     }, 500);
   }
 
-  $('form.parse').bind('ajax:success', function(e, data, status, xhr) {
-    $('pre.highlight').replaceWith(data);
-  });
+  function inputModified() {
+    modified = true;
 
-  $('#parse_source').on('input', submitSource);
-  $('#parse_language').on('change', submitSource)
+    submitSource();
+  }
+
+  function changeLanguage() {
+    if (!modified) {
+      $('#parse_source').val('')
+    }
+    else if (!$('#parse_source').val()) {
+      modified = false;
+    }
+
+    submitSource();
+  }
+
+  function highlightReady(e, data, status, xhr) {
+    data = $(data);
+    $('pre.highlight').replaceWith(data.find('pre.highlight'));
+    if (!modified) {
+      $('#parse_source').val(data.find('pre.source').text())
+    }
+  }
+
+  $('form.parse').bind('ajax:success', highlightReady);
+
+  $('#parse_source').on('input', inputModified);
+  $('#parse_language').on('change', changeLanguage)
 
   $('form.new_paste input[type=submit]').on('click', function() {
     $('#paste_language').val($('#parse_language').val());

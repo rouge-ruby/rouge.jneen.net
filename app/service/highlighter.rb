@@ -14,11 +14,11 @@ class Highlighter
     formatter.format(lexer.lex(source)).html_safe
   end
 
-  private
-
   def source
-    @source ||= @params[:source].encode(universal_newline: true)
+    @source ||= (@params[:source].presence || lexer.demo).encode(universal_newline: true)
   end
+
+  private
 
   def rouge
     RougeVersion.current
