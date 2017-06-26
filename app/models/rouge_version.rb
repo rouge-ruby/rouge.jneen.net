@@ -75,7 +75,7 @@ module RougeVersion
         Rouge::Lexers::Lua.builtins rescue nil
         Rouge::Lexers::PHP.builtins rescue nil
         Rouge::Lexers::VimL.keywords rescue nil
-        Rouge::Lexers::Gherkin.builtins rescue nil
+        Rouge::Lexers::Gherkin.keywords rescue nil
         Rouge::Lexers::Matlab.builtins rescue nil
 
         # override for when the `Rouge` constant is looked up from within
