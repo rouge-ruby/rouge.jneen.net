@@ -165,7 +165,7 @@ GEM
     pry-rails (0.3.4)
       pry (>= 0.9.10)
     public_suffix (2.0.5)
-    rack (1.6.8)
+    rack (1.6.12)
     rack-test (0.6.3)
       rack (>= 1.0)
     rack-timeout (0.4.2)
